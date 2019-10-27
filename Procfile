@@ -1,1 +1,1 @@
-web: npx start
+web: node index.js
