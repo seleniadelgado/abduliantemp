@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-      "start": "serve"
+    "start": "serve"
   },
   "author": "",
   "license": "ISC",
- "dependencies": {
+  "dependencies": {
+    "node-static": "^0.7.11",
     "serve": "^10.0.1"
   }
 }
