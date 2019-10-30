@@ -1,3 +1,6 @@
+var $ = require('jquery');
+window.$ = $;
+require('bootstrap');
 var http = require('http'),
     fs = require('fs')
 var port = process.env.PORT || 5000
