@@ -5,6 +5,7 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 
+app.use(express.static('./'));
 app.use(express.static('src'));
 
 server.listen(PORT, function() {
