@@ -1,8 +1,8 @@
 #navbarNav {
-    justify-content: flex-end;}
+  justify-content: flex-end; }
+
 a {
-  color: white;
-}
+  color: white; }
 
 .sections {
   width: 100%;
@@ -12,19 +12,15 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-    align-items: center;
-
-}
-
+  align-items: center; }
 
 .consultation-button {
- width: 319px;
+  width: 319px;
   height: 56px;
   opacity: 0.69;
   border-radius: 4px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  background-color: #000000;
-}
+  background-color: #000000; }
 
 .consolutation-text {
   width: 145px;
@@ -37,12 +33,10 @@ a {
   line-height: 1.33;
   letter-spacing: 0.01px;
   text-align: center;
-  color: #ffffff;
-}
-
+  color: #dddddd; }
 
 .consultation {
-    width: 894px;
+  width: 894px;
   height: 48px;
   font-family: Lato;
   font-size: 32px;
@@ -52,16 +46,13 @@ a {
   line-height: 1.5;
   letter-spacing: 0.02px;
   text-align: center;
-  color: #000000;
-
-}
+  color: #000000; }
 
 .BG {
   width: 1440px;
   height: 64px;
   opacity: 0.47;
-  background-color: #000000;
-}
+  background-color: #000000; }
 
 .call-banner {
   width: 557px;
@@ -74,5 +65,32 @@ a {
   line-height: normal;
   letter-spacing: 0.01px;
   text-align: center;
-  color: #000000;
-}
+  color: black; }
+
+.jumbotron {
+  text-align: center;
+  background-image: url(../images/floriane-vita-FyD3OWBuXnY-unsplash.jpg);
+  background-size: 100%;
+  background-position: center center; }
+
+.jumbotron h1 {
+  color: white;
+  text-shadow: #000000 1px 0 10px; }
+
+.jumbotron p {
+  color: white;
+  text-shadow: #000000 1px 0 10px; }
+
+hr {
+  background-color: dimgrey !important;
+  color: #b6b0b0 !important;
+  height: 7px !important;
+  width: 11% !important; }
+
+.conclusion {
+  margin-top: 30px;
+  text-align: center; }
+
+.consultationQuote {
+  margin: 5%;
+  background-color: yellow; }
