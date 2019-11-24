@@ -27,7 +27,7 @@
     "watch:js": "npm-watch build:js:dev",
     "deploy": "npm run clean && npm run copy:html && npm run build:css && npm run copy:assets && npm run build:js && npm run build && nodemon",
     "copy:assets": "cp -R src/assets dist/assets",
-    "heroku-postbuild": "webpack -p"
+    "heroku-postbuild": "yarn deploy"
   },
   "author": "",
   "license": "ISC",
