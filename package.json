@@ -25,7 +25,7 @@
     "build:js": "babel ./src/js --out-file dist/main.min.js --presets=babel-preset-minify",
     "build:js:dev": "npm run build:js -- --source-maps",
     "watch:js": "npm-watch build:js:dev",
-    "deploy": "npm run clean && npm run copy:html && npm run build:css && npm run copy:assets && npm run build:js && npm run build && nodemon",
+    "deploy": "npm run clean && npm run copy:html && npm run build:css && npm run copy:assets && npm run build:js && npm run build",
     "copy:assets": "cp -R src/assets dist/assets",
     "heroku-postbuild": "yarn deploy"
   },
