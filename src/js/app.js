@@ -1,3 +1,3 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-require('./main.js');
+import './css/style.css';
