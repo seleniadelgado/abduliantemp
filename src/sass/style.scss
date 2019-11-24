@@ -1,3 +1,6 @@
+@import 'custom';
+@import 'test';
+
 #navbarNav {
     justify-content: flex-end;}
 a {
@@ -78,7 +81,7 @@ a {
 }
 .jumbotron {
   text-align: center;
-  background-image: url(../images/floriane-vita-FyD3OWBuXnY-unsplash.jpg);
+  background-image: url(../assets/floriane-vita-FyD3OWBuXnY-unsplash.jpg);
   background-size: 100%;
   background-position: center center;
 }
@@ -103,5 +106,4 @@ hr {
 }
 .consultationQuote {
   margin: 5%;
-  background-color: yellow;
 }
