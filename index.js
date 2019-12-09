@@ -4,7 +4,8 @@ var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 
 // Routes
-indexRouter = require('./routes/home');
+homeRouter= require('./routes/home');
+aboutRouter = require('./routes/about');
 
 var app = express();
 var http = require('http');
@@ -17,7 +18,8 @@ app.use(express.static('src'));
 app.use(expressLayouts);
 app.use(express.json());
 
-app.use('/', indexRouter);
+app.use('/', homeRouter);
+app.use('/about', aboutRouter);
 
 server.listen(PORT, function() {
 	console.log('Server is running');
