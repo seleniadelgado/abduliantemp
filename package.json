@@ -13,20 +13,18 @@
     }
   },
   "scripts": {
-    "server": "concurrently -k \"npm run deploy && cd dist && live-server\" \"npm run watch:js\" \"npm run watch:css\" \"npm run watch:ejs\"",
+    "server": "concurrently -k \"npm run deploy && npm run watch\" \"npm run watch:js\" \"npm run watch:css\"",
     "start": "node index.js",
     "build": "webpack",
     "watch": "nodemon",
     "clean": "rm -rf ./dist && mkdir dist",
     "copy:assets": "cp -R src/assets dist/assets",
-    "copy:ejs": "cp -R views dist && cp -R routes dist",
-    "watch:ejs": "npm-watch copy:ejs",
     "build:css": "node-sass --omit-source-map-url src/sass/style.scss  dist/css/style.css",
     "watch:css": "npm run build:css -- --watch",
     "build:js": "babel ./src/js --out-file dist/main.min.js --presets=babel-preset-minify",
     "build:js:dev": "npm run build:js -- --source-maps",
     "watch:js": "npm-watch build:js:dev",
-    "deploy": "npm run clean && npm run copy:ejs && npm run build:css && npm run copy:assets && npm run build:js && npm run build",
+    "deploy": "npm run clean && npm run build:css && npm run copy:assets && npm run build:js && npm run build",
     "heroku-postbuild": "yarn deploy"
   },
   "author": "",
