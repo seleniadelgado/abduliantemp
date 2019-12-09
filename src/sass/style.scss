@@ -1,5 +1,4 @@
 @import 'custom';
-@import 'test';
 
 #navbarNav {
     justify-content: flex-end;}
@@ -60,7 +59,7 @@ a {
 }
 
 .BG {
-  width: 1440px;
+  width: 100%;
   height: 64px;
   opacity: 0.47;
   background-color: #000000;
@@ -107,3 +106,4 @@ hr {
 .consultationQuote {
   margin: 5%;
 }
+
