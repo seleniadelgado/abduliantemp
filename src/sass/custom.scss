@@ -6,12 +6,45 @@
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/utilities";
 @import "../../node_modules/bootstrap/scss/grid";
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/jumbotron";
+
+// Optional
+@import "../../node_modules/bootstrap/scss/reboot";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/code";
+@import "../../node_modules/bootstrap/scss/grid";
 
 .jumbotron {
     text-align: center;
     background-image: url(../assets/floriane-vita-FyD3OWBuXnY-unsplash.jpg);
     background-size: 100%;
-    background-position: center center; }
+    background-position: center center;
+
+    h1 {
+        color: white;
+        text-shadow: #000000 1px 0 10px;
+    }
+    p {
+      color: white;
+      text-shadow: #000000 1px 0 10px;
+    }
+}
+
+hr {
+    background-color: dimgrey !important;
+    color: rgb(182, 176, 176) !important;
+    height: 7px !important;
+    width: 11% !important;
+}
+
+.BG {
+    width: 100%;
+    height: 64px;
+    opacity: 0.47;
+    background-color: #200000;
+}
