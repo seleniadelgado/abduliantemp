@@ -9,13 +9,16 @@
     "js": "node --harmony"
   },
   "events": {
-    "restart": "osascript -e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
+    "restart": "e 'display notification \"App restarted due to:\n'$FILENAME'\" with title \"nodemon\"'"
   },
   "watch": [
-	"./"
+	"./src/js",
+    "./src/css",
+	"./views"
   ],
   "env": {
     "NODE_ENV": "development"
   },
-  "ext": "js,json,html"
+  "ext": "js, ejs, 'scss",
+  "delay": "50"
 }

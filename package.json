@@ -3,27 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "watch": {
-    "build:js:dev": {
-      "patterns": [
-        "./src/js"
-      ],
-      "extensions": "js",
-      "quiet": false
-    }
-  },
   "scripts": {
-    "server": "concurrently -k \"npm run deploy && npm run watch\" \"npm run watch:js\" \"npm run watch:css\"",
+    "server": "concurrently -k \"npm run deploy && npm run watch\" \"npm run watch:css\"",
     "start": "node index.js",
-    "build": "webpack",
     "watch": "nodemon",
+    "build": "webpack",
     "clean": "rm -rf ./dist && mkdir dist",
     "copy:assets": "cp -R src/assets dist/assets",
-    "build:css": "node-sass --omit-source-map-url src/sass/style.scss  dist/css/style.css",
+    "build:css": "node-sass --omit-source-map-url src/sass/main.scss  dist/css/styles.css",
     "watch:css": "npm run build:css -- --watch",
     "build:js": "babel ./src/js --out-file dist/main.min.js --presets=babel-preset-minify",
     "build:js:dev": "npm run build:js -- --source-maps",
-    "watch:js": "npm-watch build:js:dev",
     "deploy": "npm run clean && npm run build:css && npm run copy:assets && npm run build:js && npm run build",
     "heroku-postbuild": "yarn deploy"
   },
@@ -45,6 +35,7 @@
     "npm-watch": "^0.6.0",
     "path": "^0.12.7",
     "popper.js": "^1.16.0",
+    "sass-loader": "^8.0.0",
     "socket.io": "^2.3.0",
     "style-loader": "^1.0.0",
     "url-loader": "^2.3.0"
