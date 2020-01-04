@@ -3,42 +3,75 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "watch": {
+    "build:js:dev": {
+      "patterns": [
+        "js"
+      ],
+      "extensions": "js",
+      "quiet": false
+    },
+    "build:css": {
+      "patterns": [
+        "sass"
+      ],
+      "extensions": "scss",
+      "quiet": false
+    },
+    "copy:html": {
+      "quiet": false,
+      "ignore": "dist/*.ejs",
+      "extensions": "ejs",
+      "patterns": [
+        "./views"
+      ]
+    }
+  },
   "scripts": {
-    "server": "concurrently -k \"npm run deploy && npm run watch\" \"npm run watch:css\"",
     "start": "node index.js",
-    "watch": "nodemon",
-    "build": "webpack",
-    "clean": "rm -rf ./dist && mkdir dist",
-    "copy:assets": "cp -R src/assets dist/assets",
-    "build:css": "node-sass --omit-source-map-url src/sass/main.scss  dist/css/styles.css",
-    "watch:css": "npm run build:css -- --watch",
+    "server": "concurrently -k \"npm run deploy && npm run start\" \"npm run watch:js\" \"npm run watch:css\" \"npm run watch:html\"",
+    "build:css": "node-sass ./src/sass/main.scss dist/main.css && cleancss -o dist/main.min.css dist/main.css",
+    "watch:css": "npm-watch build:css",
     "build:js": "babel ./src/js --out-file dist/main.min.js --presets=babel-preset-minify",
     "build:js:dev": "npm run build:js -- --source-maps",
-    "deploy": "npm run clean && npm run build:css && npm run copy:assets && npm run build:js && npm run build",
-    "heroku-postbuild": "yarn deploy"
+    "watch:js": "npm-watch build:js:dev",
+    "heroku-postbuild": "npm run deploy",
+    "build:vendor": "concat-cli -f ./vendors/*.js -o ./dist/vendors.min.js",
+    "clean": "rm -rf ./dist && mkdir dist",
+    "copy:assets": "cp -R ./src/assets dist/assets",
+    "watch:html": "npm-watch copy:html",
+    "copy:html": "cp -R ./views dist",
+    "deploy": "npm run clean && npm run copy:html && npm run build:vendor && npm run build:css && npm run build:js && npm run copy:assets"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-minify": "^0.5.1",
-    "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.3.1",
-    "concurrently": "^5.0.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "express-ejs-layouts": "^2.5.0",
     "jquery": "^3.4.1",
     "node-static": "^0.7.11",
-    "npm-watch": "^0.6.0",
     "path": "^0.12.7",
     "popper.js": "^1.16.0",
     "socket.io": "^2.3.0"
   },
   "devDependencies": {
-    "node-sass": "^4.13.0",
-    "nodemon": "^1.19.4",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "autoprefixer": "^7.1.5",
+    "babel-cli": "^6.26.0",
+    "babel-minify": "^0.5.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-es2015-ie": "^6.7.0",
+    "bulma": "^0.7.0",
+    "clean-css-cli": "^4.1.11",
+    "concat-cli": "^4.0.0",
+    "concurrently": "^5.0.0",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.11.0",
+    "live-server": "^1.2",
+    "node-sass": "^4.5.3",
+    "npm-watch": "^0.6.0",
+    "postcss-cli": "^4.1.1"
   }
 }
