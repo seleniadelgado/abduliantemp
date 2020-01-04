@@ -7,6 +7,9 @@ var expressLayouts = require('express-ejs-layouts');
 // Routes
 homeRouter= require('./routes/home');
 aboutRouter = require('./routes/about');
+injuriesRouter = require('./routes/injuries');
+settlementsRouter = require('./routes/settlements');
+contactRouter = require('./routes/contact');
 
 var app = express();
 var http = require('http');
@@ -22,6 +25,9 @@ app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use('/', homeRouter);
 app.use('/about', aboutRouter);
+app.use('/injuries', injuriesRouter);
+app.use('/settlements', settlementsRouter);
+app.use('/contact', contactRouter);
 
 server.listen(PORT, function() {
 	console.log('Server is running');
