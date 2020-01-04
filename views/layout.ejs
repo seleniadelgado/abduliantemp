@@ -7,11 +7,19 @@
         <header>
             <%- include ('partials/header') %>
         </header>
+
+        <!-- hud start -->
+        <div id="hud" class="is-hidden-touch">
+        </div>
+        <!-- hud end -->
+
         <%- body %>
         <footer>
             <%- include ('partials/footer') %>
         </footer>
         <!-- Optional JavaScript -->
-        <script src="../dist/bundle.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/jquery/jquery.js"></script>
+        <script src="../dist/main.min.js"></script>
     </body>
 </html>

@@ -22,18 +22,10 @@
 
 
 .consultation {
-    width: 894px;
-  height: 48px;
-  font-family: Lato;
-  font-size: 32px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.5;
-  letter-spacing: 0.02px;
-  text-align: center;
-  color: #000000;
 
+  &__link {
+    color: black;
+  }
 }
 
 
