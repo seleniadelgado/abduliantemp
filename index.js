@@ -1,5 +1,6 @@
 var PORT = process.env.PORT || 5000;
 var path = require('path');
+var jquery = require('jquery');
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 
@@ -11,12 +12,13 @@ var app = express();
 var http = require('http');
 var server = http.Server(app);
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, './dist/views'));
 app.set('view engine', 'ejs');
 app.use(express.static('./'));
 app.use(express.static('src'));
 app.use(expressLayouts);
 app.use(express.json());
+app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use('/', homeRouter);
 app.use('/about', aboutRouter);
