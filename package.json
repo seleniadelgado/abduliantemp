@@ -6,14 +6,14 @@
   "watch": {
     "build:js:dev": {
       "patterns": [
-        "js"
+        "./src/js"
       ],
       "extensions": "js",
       "quiet": false
     },
     "build:css": {
       "patterns": [
-        "sass"
+        "./src/sass"
       ],
       "extensions": "scss",
       "quiet": false
