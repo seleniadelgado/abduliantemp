@@ -5,7 +5,8 @@ p {
 }
 
 * {
-  font-Family: $font-family-base;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
 }
 
 a {
@@ -19,3 +20,32 @@ a {
   height: 56px;
   width: 319px;
 }
+
+.statements {
+  align-self: center;
+
+  &__content {
+    flex-flow: column;
+    padding: 2rem 6rem;
+    color: #627c86;
+  }
+
+  &__link {
+    color: #627c86;
+    margin-top: 1rem;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+    h1 {
+      white-space: nowrap;
+    }
+}
+
+.separator {
+  width: 50%;
+  border-top: 3px solid #bf0000;
+  background-color: #bf0000;
+  margin-left: 0;
+}
+
