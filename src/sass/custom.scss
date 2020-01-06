@@ -46,6 +46,7 @@
     width: 100%;
     height: 64px;
     background-color: #0a2239;
+    opacity: 0.8;
 }
 
 #navbarNav {
@@ -92,6 +93,7 @@
     &__text{
       font-size: 20px;
       font-weight: bold;
+      color: #ffffff;
     }
 }
 
@@ -112,20 +114,87 @@
 
 /* display 3 */
 @media (min-width: 768px) {
-
     .carousel-inner .carousel-item-right.active,
     .carousel-inner .carousel-item-next {
-      transform: translateX(33.333%);
+      transform: translateX(25%);
     }
 
     .carousel-inner .carousel-item-left.active,
     .carousel-inner .carousel-item-prev {
-      transform: translateX(-33.333%);
+      transform: translateX(-25%);
     }
+
+    .carousel-control-next {
+        right: -50px;
+    }
+
+
+    .carousel-control-prev {
+        left: -50px;
+    }
+
+
+    .font-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 15px;
+        &__left {
+            background-image: url('../assets/carousel_button_left_icon/icon.png')
+        }
+        &__right {
+            background-image: url('../assets/carousel_button_icon/icon.png')
+        }
+    }
+
 }
 
 .carousel-inner .carousel-item-right,
 .carousel-inner .carousel-item-left {
     transform: translateX(0);
+}
+
+.carousel {
+    &__label {
+        margin: 4rem 0 4rem 0;
+    }
+
+}
+
+#view-all-btn {
+    width: 319px;
+    height: 54px;
+    margin: 4rem 0 4rem;
+    border-radius: 4px;
+    border: solid 1px #0049a6;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+
+    #text {
+      font-size: 1.25rem;
+      color: #1e3449;
+    }
+}
+
+.carousel-custom {
+    padding: 0 3rem 0 3rem;
+}
+
+.card-body {
+
+    &__content {
+        padding: 1rem;
+    }
+
+    &__title {
+        padding-top: .5rem;
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    &__subject {
+        font-size: 1.5rem;
+        color: #000000;
+    }
+
 }
 

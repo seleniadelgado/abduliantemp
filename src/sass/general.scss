@@ -47,5 +47,9 @@ a {
   border-top: 3px solid #bf0000;
   background-color: #bf0000;
   margin-left: 0;
+
+  &__carousel {
+    width: 100%;
+  }
 }
 
