@@ -1,6 +1,5 @@
 var PORT = process.env.PORT || 5000;
 var path = require('path');
-var jquery = require('jquery');
 var express = require('express');
 var expressLayouts = require('express-ejs-layouts');
 
@@ -21,7 +20,7 @@ app.use(express.static('./'));
 app.use(express.static('src'));
 app.use(expressLayouts);
 app.use(express.json());
-app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
+// app.use('/jquery', express.static(__dirname + '/node_modules/jquery/dist/'));
 
 app.use('/', homeRouter);
 app.use('/about', aboutRouter);

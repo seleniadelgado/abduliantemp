@@ -11,6 +11,9 @@
 @import "../../node_modules/bootstrap/scss/navbar";
 @import "../../node_modules/bootstrap/scss/nav";
 @import "../../node_modules/bootstrap/scss/jumbotron";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/card";
+
 
 // Optional
 @import "../../node_modules/bootstrap/scss/reboot";
@@ -22,14 +25,15 @@
 .jumbotron {
 
     h1 {
-      font-size: 3rem;
+        font-size: 3rem;
     }
 
     p {
-      color: white;
-      text-shadow: #000000 1px 0 10px;
+        color: white;
+        text-shadow: #000000 1px 0 10px;
     }
 }
+
 
 //hr {
 //    //background-color: dimgrey !important;
@@ -90,3 +94,38 @@
       font-weight: bold;
     }
 }
+
+@media (max-width: 768px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+
+/* display 3 */
+@media (min-width: 768px) {
+
+    .carousel-inner .carousel-item-right.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(33.333%);
+    }
+
+    .carousel-inner .carousel-item-left.active,
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-33.333%);
+    }
+}
+
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left {
+    transform: translateX(0);
+}
+
