@@ -1,0 +1,35 @@
+.injuries {
+
+
+  &__items {
+    border: solid 1px #0a2239;
+    padding: 0;
+    list-style: none;
+
+  }
+
+  &__item {
+    border: solid 1px #0a2239;
+  }
+}
+
+.practice-area {
+  border: solid 1px #0a2239;
+  padding: 1rem 0 2rem 2rem;
+
+  &__header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #000000;
+  }
+
+  &__items {
+    list-style: none;
+    padding: 0;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+    color: #004ca3;
+  }
+}
