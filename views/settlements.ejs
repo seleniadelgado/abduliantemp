@@ -1,7 +1,28 @@
-<section class="jumbotron">
-    <div class="jumbotron jumbotron-fluid mb-0">
-        <div class="container">
-            <h1 class="display-4">Settlements</h1>
-        </div>
+<section class="jumbotron jumbotron-fluid jumbotron-custom jumbotron-custom--settlements">
+    <div class="jumbotron-custom__shadow vertical-center">
+        <h1 class="jumbotron-custom__text vertical-center">Recent Settlements</h1>
     </div>
 </section>
+
+<div class="container-fluid container-fluid--custom">
+    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+    <% for (let i=0; i<data.length; i += 1) {%>
+        <% total=data[i] %>
+        <%- include ('partials/settlement') %>
+    <%}%>
+    <div class="settlement">
+       <div class="settlement__header">
+          <span class="settlement__header-sum">$4.5 million</span>
+           <span class="settlement__header-subject">Settlement</span>
+       </div>
+        <hr class="settlement__separator">
+        <div class="settlement__body">
+            <span class="settlement__icon">
+               <i class="fa fa-car fa-3x"></i>
+            </span>
+            <span class="settlement__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ut lectus aliquet, blandit ante id, vestibulum quam. Quisque lobortis nisl id efficitur facilisis. Cras sed ipsum velit. Nulla interdum, dolor non tincidunt rutrum, enim lorem accumsan mi, sit amet euismod dui nibh sed elit. Nulla facilisi. Sed erat orci, ultricies quis semper ut, efficitur eget sem.</span>
+        </div>
+
+    </div>
+</div>
+
