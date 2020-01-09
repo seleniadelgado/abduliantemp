@@ -1,15 +1,34 @@
 .injuries {
 
-
+  &__container {
+    overflow-y: auto;
+    height: 930px;
+  }
   &__items {
-    border: solid 1px #0a2239;
-    padding: 0;
+    padding: 0 2rem 2rem;
     list-style: none;
+  }
 
+  &__text {
+    color: #000000;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  &__header {
+    margin: 0;
   }
 
   &__item {
-    border: solid 1px #0a2239;
+  }
+
+  &__info {
+    margin-top: 1rem;
+    display: inline-block;
+  }
+
+  &__body {
+    margin-top: 4rem;
   }
 }
 
