@@ -1,7 +1,45 @@
-<section class="jumbotron">
-    <div class="jumbotron jumbotron-fluid mb-0">
-        <div class="container">
-            <h1 class="display-4">Contact</h1>
+<section class="jumbotron jumbotron-fluid jumbotron-custom jumbotron-custom--about">
+    <div class="jumbotron-custom__shadow vertical-center">
+        <h1 class="jumbotron-custom__text vertical-center">Contact Us</h1>
+    </div>
+</section>
+<section class="container contact-page">
+    <div class="contact-page__header">
+        <span id="header-title">We are based in Los Angeles, CA</span>
+        <hr class="separator separator--contact">
+    </div>
+    <div class="contact-page__description">
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet mauris vitae est aliquet blandit a sed ipsum. Suspendisse potenti. </span>
+    </div>
+    <div class="text-center justify-content-center mb-5 row">
+        <div class="contact-page__info col-md-3">
+            <div class="contact-page__icon fa-3x">
+                <i class="fa fa-location-arrow"></i>
+            </div>
+            <div class="contact-page__body">
+                <span>350 Fake St. Orange County, Los Angeles, California, USA</span>
+            </div>
+        </div>
+        <div class="contact-page__info col-md-3" id="contact-number">
+            <div class="contact-page__icon">
+                <i class="fa fa-phone fa-3x"></i>
+            </div>
+            <div class="contact-page__body">
+                <span>TEL: +2 392 3929 210</span>
+                <span>FAX: +2 392 3929 210</span>
+            </div>
+        </div>
+        <div class="contact-page__info col-md-3" id="business-hours">
+            <div class="contact-page__icon">
+                <i class="fa fa-clock-o fa-3x"></i>
+            </div>
+            <div class="contact-page__body">
+                <span>Monday – Friday : 9am to 20 pm</span>
+                <span>Saturday : 9am to 17 pm</span>
+            </div>
         </div>
     </div>
 </section>
+
+<!-- Contact form -->
+<%- include ('partials/contact-form') %>

@@ -4,7 +4,7 @@ p {
   margin: 0 0
 }
 
-* {
+*.not(i) {
     font-family: 'Lato', sans-serif;
     font-weight: 400;
 }
@@ -67,6 +67,11 @@ a {
   &--about {
     width: 15%;
     margin-top: 0;
+  }
+
+  &--contact {
+    margin: 0 auto;
+    width: 15%;
   }
 }
 
