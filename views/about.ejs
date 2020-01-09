@@ -1,7 +1,39 @@
-<section class="jumbotron">
-    <div class="jumbotron jumbotron-fluid mb-0">
-        <div class="container">
-            <h1 class="display-4">About Us</h1>
-        </div>
+<section class="jumbotron jumbotron-fluid jumbotron-custom jumbotron-custom--about">
+    <div class="jumbotron-custom__shadow vertical-center">
+        <h1 class="jumbotron-custom__text vertical-center">About Us</h1>
     </div>
 </section>
+
+<div class="about container-fluid">
+    <div class="about__profile row">
+        <div class="col-md-4">
+            <div class="about__image" id="john"></div>
+        </div>
+        <div class="col-md-8 about__description">
+            <div class="about__header">
+                <div class="about__name">John Abdulian</div>
+                <hr class="separator separator--about">
+            </div>
+            <div class="about__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna. Tellus pellentesque eu tincidunt tortor aliquam nulla.
+            </div>
+        </div>
+    </div>
+    <div class="about__profile row">
+        <div class="col-md-4">
+            <div class="about__image" id="jane"></div>
+        </div>
+        <div class="col-md-8 about__description">
+            <div class="about__header">
+                <div class="about__name">Jane Abdulian</div>
+                <hr class="separator separator--about">
+            </div>
+            <div class="about__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Aliquet nibh praesent tristique magna. Tellus pellentesque eu tincidunt tortor aliquam nulla.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Contact -->
+<%- include ('partials/contact-form') %>

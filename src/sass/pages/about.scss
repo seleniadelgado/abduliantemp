@@ -1,0 +1,42 @@
+.about {
+  padding: 4rem;
+  margin: 0;
+
+  &__profile {
+    padding: 2rem 11rem 2rem 2rem;
+  }
+
+  &__description {
+    padding: 2rem;
+  }
+
+  &__header {
+    padding: 0;
+  }
+
+  &__name {
+    color: #000000;
+    font-size: 2rem;
+  }
+
+  &__text {
+    padding: 0;
+    line-height: 1.78;
+  }
+
+  &__image {
+    background-size: contain;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center right;
+  }
+}
+
+#john {
+  background-image: url('../../assets/john_abdulian/bitmap.png')
+}
+
+#jane {
+  background-image: url('../../assets/jane_abdulian/bitmap.png')
+}
+

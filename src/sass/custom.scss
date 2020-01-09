@@ -107,6 +107,13 @@
         height:256px;
     }
 
+    &--about {
+      background-image: url('../assets/about_banner/bitmap.png');
+      background-size: cover;
+      height:256px;
+
+    }
+
     &__item {
         margin-bottom: 2rem;
     }
