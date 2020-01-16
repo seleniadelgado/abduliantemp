@@ -36,27 +36,20 @@
     }
 }
 
-
-//hr {
-//    //background-color: dimgrey !important;
-//    //color: rgb(182, 176, 176) !important;
-//    height: 7px !important;
-//    width: 11% !important;
-//}
-
-.BG {
+#navbar-custom {
     width: 100%;
     height: 64px;
     background-color: #0a2239;
     opacity: 0.8;
+    padding: 0 5rem;
+}
+
+#navbar-title {
+  color: #eeeeee;
 }
 
 #navbarNav {
     justify-content: flex-end;}
-
-.navbar {
-    padding: 0 5rem;
-}
 
 .nav-link {
     color: #eeeeee;
