@@ -1,24 +1,25 @@
-<div class="row mx-auto my-auto carousel-custom">
-    <div id="recipeCarousel" class="carousel slide w-100" data-ride="carousel">
-        <div class="carousel-inner w-100" role="listbox">
+<div class="row mx-auto my-auto">
+    <div id="recipeCarousel" class="carousel testimonial-carousel slide w-100" data-ride="carousel">
+        <div class="carousel-inner w-100" id="testimonial" role="listbox">
             <% for(let i=0; i < data.length; i += 1) { %>
-              <% if (i == 0) { %>
+            <% if (i == 0) { %>
                 <div class="carousel-item active">
-              <% } else { %>
-                <div class="carousel-item">
-              <% } %>
-                <div class="col-md-3">
-                    <div class="card card-body">
-                        <span class="card-body__title"><%- data[i].total %></span>
-                        <span class="card-body__subject">Settlement</span>
-                        <hr class="separator separator__carousel"/>
+                    <% } else { %>
+                    <div class="carousel-item" id="testimonial-item">
+                    <% } %>
+                <div class="col-md-12">
+                    <div class="card card-body card-testimonial">
                         <span class="card-body__content">
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores mollitia vitae quis, sapiente voluptates necessitatibus ratione culpa alias labore voluptas cum omnis dolores explicabo, amet soluta consequatur pariatur officiis. Porro.</p>
+                            <p><%- data[i].description%></p>
+                        </span>
+                        <span class="card-body__info">
+                            <p id="testimonials__author"><%- data[i].name %></p>
+                            <p id="testimonials__location"><%- data[i].location %></p>
                         </span>
                     </div>
                 </div>
               </div>
-            <% } %>
+                <% } %>
         </div>
             <a class="carousel-control-prev w-auto" href="#recipeCarousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon font-icon font-icon__left" aria-hidden="true"></span>

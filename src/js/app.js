@@ -14,12 +14,38 @@ const init = () => {
 };
 //
 
-const carouselInit = () => {
+const testimonialsCarouselInit = () => {
     $('#recipeCarousel').carousel({
         interval: 10000
-    })
+    });
 
-    $('.carousel .carousel-item').each(function(){
+
+    $('#testimonial-carousel .carousel-item').each(function(){
+        console.log('hello test')
+        var minPerSlide = 1;
+        var next = $(this).next();
+        if (!next.length) {
+            next = $(this).siblings(':first');
+        }
+        next.children(':first-child').clone().appendTo($(this));
+
+        for (var i=0;i<minPerSlide;i++) {
+            next=next.next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+
+            next.children(':first-child').clone().appendTo($(this));
+        }
+    });
+};
+
+const settlementsCarouselInit = () => {
+    $('#recipeCarousel').carousel({
+        interval: 10000
+    });
+
+    $('#settlements-carousel .carousel-item').each(function(){
         var minPerSlide = 4;
         var next = $(this).next();
         if (!next.length) {
@@ -40,5 +66,6 @@ const carouselInit = () => {
 
 $(() => {
 	init();
-	carouselInit();
+	settlementsCarouselInit();
+	testimonialsCarouselInit();
 });
