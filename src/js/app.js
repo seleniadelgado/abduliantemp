@@ -12,6 +12,23 @@ const init = () => {
 		}
 	});
 };
+
+function resize() {
+    let count = 0;
+    if ( $(window).width() < 800) {
+        count = 1
+    } else if (880 <= $(window).width() < 1256) {
+        count = 2
+    } else if (1256 <= $(window).width() < 1440) {
+        count = 3
+    }
+    else {
+        count = 4
+    }
+
+    return count;
+}
+$(window).on("resize", resize);
 //
 
 const testimonialsCarouselInit = () => {
@@ -40,13 +57,13 @@ const testimonialsCarouselInit = () => {
     });
 };
 
-const settlementsCarouselInit = () => {
+const settlementsCarouselInit = (count) => {
     $('#recipeCarousel').carousel({
         interval: 10000
     });
 
     $('#settlements-carousel .carousel-item').each(function(){
-        var minPerSlide = 4;
+        var minPerSlide = count;
         var next = $(this).next();
         if (!next.length) {
             next = $(this).siblings(':first');
@@ -66,6 +83,6 @@ const settlementsCarouselInit = () => {
 
 $(() => {
 	init();
-	settlementsCarouselInit();
+	settlementsCarouselInit(resize());
 	testimonialsCarouselInit();
 });
