@@ -11,15 +11,17 @@
                 <div class="practice-area__header"><span>Practice Area</span></div>
                 <ul class="practice-area__items">
                     <% for (let i=0; i<data.length; i += 1) { %>
-                    <li class="practice-area__item"><%- data[i].name %></li>
+                        <a href=<%= `#${data[i].name}` %>> <li class="practice-area__item"><%- data[i].name %></li></a>
                     <% } %>
                 </ul>
             </div>
             <div class="col-md-8 injuries__container">
+                <div class="injuries__items">
                 <% for (let i=0; i<data.length; i += 1) {%>
                     <% accident=data[i] %>
                     <%- include ('partials/injury-accident') %>
                 <%}%>
+                </div>
             </div>
         </div>
     </div>
