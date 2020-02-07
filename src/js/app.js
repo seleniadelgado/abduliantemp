@@ -166,8 +166,23 @@ const sendMail = async (data) => {
   return res
 };
 
+const initSettlementLinks = () => {
+    const elements = $('.practice-area__item');
+    for (let element of elements) {
+        element.addEventListener('click', (e) => {
+            debugger
+            e.preventDefault();
+            document.querySelector(e.target.parentElement.hash).scrollIntoView({
+                behavior: 'smooth'
+            });
+        })
+
+    }
+}
+
 $(() => {
 	initNavBar();
+	initSettlementLinks();
 	settlementsCarouselInit(resize());
 	testimonialsCarouselInit();
 });
