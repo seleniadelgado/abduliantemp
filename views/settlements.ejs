@@ -6,8 +6,8 @@
 
 <div class="container-fluid container-fluid--custom">
     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
-    <% for (let i=0; i<data.length; i += 1) {%>
-        <% total=data[i] %>
+    <% for (let i=0; i<data.settlements.length; i += 1) {%>
+        <% total=data.settlements[i] %>
         <%- include ('partials/settlement') %>
     <%}%>
     <div class="settlement">
