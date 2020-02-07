@@ -82,7 +82,7 @@ const settlementsCarouselInit = (count) => {
 const validateEmail = (email) => !!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email));
 
 const validate = (data) => {
-    data.every((item) => {
+    return data.every((item) => {
         if (item.name === 'email') {
             return validateEmail(item.value);
         }
