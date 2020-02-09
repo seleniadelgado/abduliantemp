@@ -23,6 +23,7 @@ app.use(bodyParser.json());
 
 app.set('views', path.join(__dirname, './dist/views'));
 app.set('view engine', 'ejs');
+app.use('/assets', express.static('./dist/assets'));
 app.use(express.static('./'));
 app.use(express.static('src'));
 app.use(expressLayouts);

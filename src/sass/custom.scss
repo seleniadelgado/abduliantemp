@@ -109,19 +109,19 @@ $container-max-widths: (
   height: 397px;
 
   &--home {
-    background-image: url('../assets/home_banner/business_man_hero.png');
+    background-image: url('assets/home_banner/business_man_hero.png');
     background-color: white;
     background-position-x: 80%;
   }
 
   &--settlements {
-    background-image: url('../assets/recent_settlement_banner/settlement.png');
+    background-image: url('assets/recent_settlement_banner/settlement.png');
     background-size: cover;
     height:256px;
   }
 
   &--about {
-    background-image: url('../assets/about_banner/bitmap.png');
+    background-image: url('assets/about_banner/bitmap.png');
     background-size: cover;
     height:256px;
 
@@ -262,10 +262,10 @@ $container-max-widths: (
   height: 42px;
   border-radius: 15px;
   &__left {
-    background-image: url('../assets/carousel_button_left_icon/icon.png')
+    background-image: url('assets/carousel_button_left_icon/icon.png')
   }
   &__right {
-    background-image: url('../assets/carousel_button_icon/icon.png')
+    background-image: url('assets/carousel_button_icon/icon.png')
   }
 }
 
